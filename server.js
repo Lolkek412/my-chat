@@ -32,6 +32,7 @@ wss.on("connection", (ws) => {
     });
 });
 
-server.listen(3000, () => {
-    console.log("Сервер запущен на http://localhost:3000");
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+    console.log(`Сервер запущен на порту ${PORT}`);
 });
